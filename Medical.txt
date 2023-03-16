@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital</title>
+    <link rel="stylesheet" href="medical.css">
+</head>
+
+<body>
+    <script>
+        class Medical {
+            Detail() {
+                var Name = prompt("Enter the name");
+                var Age = parseInt(prompt("Enter the Age"));
+                document.write("your Name is:" + Name + "<br>");
+                document.write("your Age is:" + Age + "<br>");
+            }
+            Bp() {
+                var Bp = prompt("Your Bp level");
+                document.write("Your Bp level:" + Bp + "<br><br>");
+                if (Bp => 70 && Bp <= 90) {
+                    document.write("Your Bp level is low" + "<br><br>");
+                    document.write("Tablet:Fludrocortisone" + "<br><br>");
+                    document.write("Food Protocols:Salty foods can increase blood pressure. Try eating canned soup, smoked fish, cottage cheese, pickled items and olives." + "<br><br>");
+                }
+                else if (Bp > 90 && Bp <= 120) {
+                    document.write("Your Bp level is normal,keep it up." + "<br><br>");
+                }
+                else if (Bp > 120 && Bp <= 140) {
+                    document.write("Your Bp level is Hypertension." + "<br><br>");
+                    document.write("Tablet: Mellitus.<br><br>");
+                    document.write("Food Protocols: Excersise regularly. Eat plenty of fruits, vegetables, whole grains, fish.<br><br>");
+                }
+                else if (Bp > 140 && Bp <= 160) {
+                    document.write("You have 1st stage of hyper-tension." + "<br><br>");
+                    document.write("Tablet: Amlodipine. " + "<br><br>");
+                    document.write("Food Protocols:Maintaining a healthy diet with less salt.Get regular physical activity.Maintaining a healthy weight or losing weight.Limiting Alcohol. " + "<br><br>")
+                }
+                else if (Bp > 160) {
+                    document.write("Your bp level is 2nd stage of high,confirm death" + "<br>");
+                    document.write("Tablet: beta-blockers " + "<br><br>");
+                    document.write("Protocols: Cut back on Alcohols,Excersise regularly,stop smoking,reduce amount of salt." + "<br><br>")
+                }
+                else {
+                    document.write("Invalid Number" + "<br>");
+                }
+            }
+            Sugar() {
+                var Sugar = prompt("Your Sugar level is:");
+                document.write("Your Sugar level is:" + Sugar + "<br><br>");
+                var a = prompt("Enter 1.Before,Enter 2.after:");
+                switch (a) {
+                    case "1":
+                        {
+                            if (Sugar => 70 && Sugar <= 90) {
+                                document.write("Your sugar level is Normal. Keep it up. " + "<br><br>");
+                            }
+                            else if (Sugar > 90 && Sugar <= 120) {
+                                document.write("You have pre-diabetes." + "<br><br>");
+                                document.write("Tablet: Metaformin. " + "<br><br>");
+                                document.write("Food Structure:Eat a diet low in saturated fat and trans fat can help reduce your risk of developing heart disease. Choose protien sources such as the following: beans and legumes.Soybean products,such as tofu and tempeh." + "<br><br>");
+                            }
+                            else if (Sugar > 120) {
+                                document.write("You have Diabetes. " + "<br><br>");
+                                document.write("Tablet: glimepiride. " + "<br><br>");
+                                document.write("Food: Leafy greens, leafy vegetables are low in calories." + "<br><br>");
+                                document.write("Avoids: You should avoid sugar-sweetened beverages.Sugary beverages are the worst drink choice for someone with diabetes." + "<br><br>")
+                            }
+                            else {
+                                document.write("Invalid");
+                            }
+                        }
+                        break; mmvmmcmmv
+                    case "2":
+                        {
+                            if (Sugar < 140) {
+                                document.write("Your sugar level is Normal. Keep it up." + "<br><br>");
+                            }
+                            else if (Sugar => 140 && Sugar <= 199) {
+                                document.write("Pre-diabetes" + "<br><br>");
+                                document.write("Tablet: Metaformin. " + "<br><br>");
+                                document.write("Food Structure: Eat a diet low in saturated fat and trans fat can help reduce your risk of developing heart disease.Choose protien sources such as the following: beans and legumes. Soybean products, such as tofu and tempeh. " + "<br><br>");
+                            }
+                            else if (Sugar => 200) {
+                                document.write("Diabetes" + "<br><br>");
+                                document.write("Tablet: glimepiride. " + "<br><br>");
+                                document.write("Food: Leafy greens, leafy vegetables are low in calories." + "<br><br>");
+                                document.write("Avoids: You should avoid sugar-sweetened beverages. Sugary beverages are the worst drink choice for someone with diabetes." + "<br><br>");
+                            }
+                        }
+                        break;
+                    default:
+                        {
+                            document.write("Go and consult doctor. " + "<br><br>");
+                        }
+                }
+            }
+            Salt() {
+                var sod = prompt("Enter the Sodium Level: ");
+                document.write("Sodium: " + sod + "<br><br>");
+                if (sod <= 135) {
+                    document.write("You have Hyponatremia. (i.e) You have Dangerously Low Sodium. " + "<br><br>");
+                    document.write("Tablet: Tolvaptan" + "<br><br>");
+                    document.write("Food Protocols: Snack on salty nut, salty rice cakes or other low-fat salty snacks to raise your blood sodium levels. \n Avoid high fat salty snacks, such as chips to maintain a healthy overall diet. You may have the urge to drink water when eating salty snacks, but you should reduce your water intake to only a few sips. " + "<br><br>");
+                }
+                else if (sod >= 135 && sod <= 145) {
+                    document.write("Your Sodium leves is Normal. Keep it up to stay fit." + "<br><br>");
+                }
+                else if (sod >= 145) {
+                    document.write("You have Hypernatremia (i.e) You have high sodium level in your blood. " + "<br><br>");
+                    document.write("Tablet: Chlorpropamide and clofibrate " + "<br><br>");
+                    document.write("Food Protocols: Eat any fresh fruits, like apples, oranges or bananas. Any fresh vegetables, like spinach, carrots or broccoli. Frozen vegetables without added butter or sauce. " + "<br><br>");
+                }
+                else {
+                    document.write("Invalid");
+                }
+            }
+            Cholesterol() {
+                var ch = prompt("Enter the Cholestrol level");
+                document.write("Your Cholestrol level is: " + ch + "<br><br>");
+                if (ch < 200) {
+                    document.write("You have Heart-Healthy. Keep it up." + "<br><br>");
+                }
+                else if (ch > 200 && ch <= 239) {
+                    document.write("Risk" + "<br><br>");
+                    document.write("You don't need any medications. So eat fresh fruits and vegetables to avoid dangerous cholestrol. " + "<br><br>");
+                }
+                else if (ch => 240) {
+                    document.write("You have Dangerous level of Cholestrol. " + "<br><br>");
+                    document.write("Tablet: Statins" + "<br><br>");
+                    document.write("Food Protocols: You should eat plenty of vegetables, fruit and wholegrains. A variety of healthy protien-rich foods, legumes, nuts and seeds. " + "<br><br>");
+                }
+            }
+            HB() {
+                var h = prompt("Enter the HB value: ");
+                document.write("HB: " + h + "<br><br>");
+                var b = prompt("Enter 1.male,Enter 2.female:");
+                switch (b) {
+                    case "1":
+                        {
+                            if (h >= 13 && h <= 16) {
+                                document.write("Your HB level is Normal. ");
+                                document.write("You don't need any Medications. Keep the HB Level." + "<br><br>");
+                            }
+                            else if (h < 16.6) {
+                                document.write("You have Low HB in your blood. " + "<br><br>");
+                                document.write("Medicine: Foltrate " + "<br><br>");
+                                document.write("Food Protocols: Rely on Fruits: Apricots, apples, grapes, bananas, pomegranates and watermelons play a very important role in improving hemoglobin count. Apples are a delicious and suitable option when it comes to increasing hemoglobin levels as they are one of the most iron-rich fruits out there. ");
+                            }
+                            else if (h > 13.2) {
+                                document.write("You have Low HB in your blood. " + "<br><br>");
+                                document.write("Medicine: Foltrate " + "<br><br>");
+                                document.write("Food Protocols: Rely on Fruits: Apricots, apples, grapes, bananas, pomegranates and watermelons play a very important role in improving hemoglobin count. Apples are a delicious and suitable option when it comes to increasing hemoglobin levels as they are one of the most iron-rich fruits out there. ");
+                            }
+                            else {
+                                document.write("Invalid");
+                            }
+                        } break;
+                    case "2":
+                        {
+                            if (h >= 12 && h <= 16) {
+                                document.write("Your HB level is Normal.");
+                                document.write("You don't need any Medications. Keep the HB Level." + "<br><br>");
+                            }
+                            else if (h <= 11.6) {
+                                document.write("You have Low HB in your blood. " + "<br><br>");
+                                document.write("Medicine: Foltrate " + "<br><br>");
+                                document.write("Food Protocols: Rely on Fruits: Apricots, apples, grapes, bananas, pomegranates and watermelons play a very important role in improving hemoglobin count. Apples are a delicious and suitable option when it comes to increasing hemoglobin levels as they are one of the most iron-rich fruits out there. ");
+                            }
+                            else if (h >= 15) {
+                                document.write("You have High HB level in your Blood." + "<br><br>");
+                                document.write("Medicine: Hydroxyruea (Droxia, Hydrea)" + "<br><br>");
+                                document.write("Food Protocols: Eat iron-rich foods like red meat, such as beef, pork and poultry." + "<br><br>");
+                            }
+                            else {
+                                document.write("Invalid");
+                            }
+                        }
+                        break;
+                    default:
+                        {
+                            document.write("HB level INvalid");
+                        }
+                }
+            }
+        }
+        class BMI extends Medical {
+            height_weight() {
+                const weight = prompt("Enter your Weight: ");
+                document.write("Your Weight is: " + weight + "<br><br>");
+                const height = prompt("Enter your Height: ");
+                document.write("Your Height is: " + height + "<br><br>");
+                const bmi = weight / (height * height);
+                document.write("Your BMI (Body Mass Index) is: " + bmi + "<br><br>");
+                if (bmi < 18.5) {
+                    document.write("You are in under weight. You should intake calories in food and also you should gain some weight to improve your health");
+                }
+                else if (bmi >= 18.5 && bmi <= 24.9) {
+                    document.write("Your weight is normal. Keep it up your food structure.");
+                }
+                else if (bmi >= 25 && bmi <= 29.9) {
+                    document.write("You are overweight. You should reduce your calorie food and intake some oates.");
+                }
+                else {
+                    document.write("You should consult a doctor for a diet plan");
+                }
+            }
+        }
+        const obj = new BMI();
+        obj.Detail();
+        obj.Bp();
+        obj.Sugar();
+        obj.Salt();
+        obj.Cholesterol();
+        obj.HB();
+        obj.height_weight();
+
+    </script>
+</body>
+
+</html>
